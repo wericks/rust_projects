@@ -10,6 +10,6 @@ fn main() {
         .read_line(&mut chute )
         .expect("Falha ao ler a linha");
 
-    println("Seu chute foi: {} ", chute);
+    println!("Seu chute foi: {} ", chute);
 
 }
