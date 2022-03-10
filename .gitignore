@@ -1,0 +1,9 @@
+#gerados pelo Cargo
+debug/
+target/
+
+**/*.rs.bk
+
+.idea/
+
+Cargo.lock
