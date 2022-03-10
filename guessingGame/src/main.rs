@@ -12,14 +12,17 @@ fn main() {
     println!("Digite o palpite de um número : ");
     let mut palpite_numero = String::new();
 
+    // lidando com possiveis falhas
     io::stdin()
         .read_line(&mut palpite_numero)
         .expect("Falha ao ler a linha");
 
+    // sombrea o palpite_numero e passa o seu valor string para u32
     let palpite_numero: u32 = palpite_numero.trim().parse().expect("Por favor insira um número!");
 
     println!("Seu palpite foi: {} ", palpite_numero);
 
+    // utiliza o numero_secreto para selecionar um dos arms
     match palpite_numero.cmp(&numero_secreto) {
         Ordering::Less => println!("muito baixo!"),
         Ordering::Greater => println!("muito alto!"),
