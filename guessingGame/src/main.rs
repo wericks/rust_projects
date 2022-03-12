@@ -4,9 +4,9 @@ use std::cmp::Ordering;
 
 
 fn main() {
-    println!("Adivinhe um número!\n");
+    // println!("Adivinhe um número!\n");
 
-    let numero_secreto = rand::thread_rng().gen_range(1..101);
+    // let numero_secreto = rand::thread_rng().gen_range(1..101);
     // println!("O número secreto é: {}", numero_secreto);
     let soma = 32 + 9;
     let resto = 40 % 6;
@@ -32,7 +32,32 @@ fn main() {
 
 
 
-    // loop para permitir mais de uma única tentativa
+    //---Start---conceitos básicos
+    let soma = 32 + 9;
+    let resto = 40 % 6;
+    println!("soma {}\nresto divisão: {}", soma, resto);
+
+    let tup : (i32, f64, u8) = (500, 6.4, 2);
+        // acesando tupla atravez de destructing
+        let (x, y, z) = tup;
+        println!("\nvalor Z na tupla : {} ", z);
+        println!("\nvalor Y na tupla : {} ", y);
+        println!("\nvalor X na tupla : {} \n", x);
+
+    // acessando tupla atravez do elemento e index
+    let quinhentos = tup.0;
+    let seis_quatro = tup.1;
+    let dois = tup.2;
+        println!("\nvalor X na tupla : {} \n", quinhentos);
+        println!("\nvalor X na tupla : {} \n", seis_quatro);
+        println!("\nvalor X na tupla : {} \n", dois);
+
+
+
+
+// ---End--- conceitos básicos
+
+/*    // loop para permitir mais de uma única tentativa
     loop {
         println!("Digite o palpite de um número : ");
         let mut palpite_numero = String::new();
@@ -63,5 +88,5 @@ fn main() {
                 break;
             }
         }
-    }
+    }    */
 }
